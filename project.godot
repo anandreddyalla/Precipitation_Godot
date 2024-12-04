@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Precipitate Quest"
+run/main_scene="res://pq/Menu/main_menu.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/bg_color=Color(0.407843, 1, 0.886275, 1)
+boot_splash/image="res://pq/icon.png"
+config/icon="res://pq/icon.png"
+
+[audio]
+
+buses/default_bus_layout="res://pq/default_bus_layout.tres"
+
+[autoload]
+
+Global="*res://pq/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[filesystem]
+
+import/blender/enabled=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
